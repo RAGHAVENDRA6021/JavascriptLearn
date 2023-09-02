@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="first second">DOM object model</h1>
+    <ul>
+      <li>first</li>
+      <li>second</li>
+      <li>third</li>
+    </ul>
+  </body>
+  <script>
+    const h1 = document.querySelector('h1');
+    h1.textContent += ' Raghava';
+    console.log(h1.classList);
+    const list = h1.classList;
+    h1.style.color = 'red';
+    h1.style.backgroundColor = 'yellow';
+    document.querySelector('body').style.margin = 0;
+    h1.style.margin = 0;
+    h1.setAttribute('id', 'head');
+    console.log(h1.getAttribute('class'));
+    console.log(document.querySelectorAll('li'));
+    document.querySelectorAll('li')[1].textContent = 'item 2 , say hi ';
+    const ul = document.querySelector('ul');
+    console.log(ul.children); // only element nodes
+    console.log(ul.childNodes); //contains text nodes & element nodes  each text nodes contain data, it will act as text content in element nodes
+    console.log(document.querySelector('li:last-of-type'));
+    console.log(ul.lastElementChild);
+  </script>
+</html>
