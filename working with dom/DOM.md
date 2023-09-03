@@ -19,6 +19,27 @@ browser exposes web APi to allow javascript to work with parsed document
 - querySelector(),getElementById() - returns single elements -(by css selector , by ID respectively)
 
 * querySelectorAll(),getElementByTagName() , getElementsByClassName() - returns collection /array of elements - (by css selectors, tag name ,class name)
-* querySelectorAll() returns snapshot , so if we add or remove elements , it does not return new data
+* querySelectorAll() returns snapshot , so if we add or remove elements , it does not return new data - not live
 
-* getElementByTagName() , getElementsByClassName() returns live , so updating will return updated dom
+* getElementByTagName() , getElementsByClassName() returns live , so updating will return updated dom - live
+
+## create Element
+
+two ways
+
+- html string - in innerHTML
+- createElement() - appendChild(),append(),prepend(),after()
+  ![Alt text](../images/image-1.png)
+
+## cloning DOM
+
+> cloneNode(true) - deep clone
+> cloneNode(false) - shallow clone
+
+## remove Child
+
+you can remove child
+
+> list.removeChild(removingChild)
+
+![Alt text](image-1.png)

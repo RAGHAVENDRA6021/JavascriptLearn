@@ -15,6 +15,7 @@
       <li>second</li>
       <li>third</li>
     </ul>
+    <section></section>
   </body>
   <script>
     const h1 = document.querySelector('h1');
@@ -34,5 +35,24 @@
     console.log(ul.childNodes); //contains text nodes & element nodes  each text nodes contain data, it will act as text content in element nodes
     console.log(document.querySelector('li:last-of-type'));
     console.log(ul.lastElementChild);
+    console.log(document.querySelector('li').parentNode); // parentElement/parentNode returns immediate parent
+    // to select nearest ancestor
+    console.log(ul.closest('body'));
+    // to select siblings - previousElementSibling, nextElementSibling
+    console.log(ul.previousElementSibling);
+    //get className
+    console.log(h1.className);
+    //h1.classList.contains('first')
+    //h1.classList.toggle('first')
+    document.querySelector('section').innerHTML = `<h2> hello </h2>`;
+    const section = document.querySelector('section');
+    const list1 = document.createElement('ul');
+    for (ele of ['list 1', 'list 2']) {
+      const liTag = document.createElement('li');
+      liTag.textContent = ele;
+      list1.appendChild(liTag);
+    }
+    section.append(list1);
+    //we can prepend as well
   </script>
 </html>
